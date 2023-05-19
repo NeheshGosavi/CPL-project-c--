@@ -4,7 +4,7 @@
 //explaination for each logic will be done to you on pen and paper.
 
 #include <iostream>
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 class graph;//forward declaration
@@ -53,6 +53,7 @@ class graph{
     graph(int n,vector<int>&givenarr)
     {
         arr=new node*[n];
+        for(int i=0;i<n;i++) arr[i]=0;
         size=n;
         for(int i=0;i<givenarr.size();i++)
         {
@@ -85,7 +86,7 @@ class graph{
     {
         for(int i=0;i<size;i++)
         {
-            if(arr[i])
+            if(arr[i]!=0)
             {
                 node* mov=arr[i];
                 cout<<mov->data<<" -> ";
